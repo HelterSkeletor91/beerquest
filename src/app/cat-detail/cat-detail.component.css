@@ -1,0 +1,26 @@
+h2 {
+    display: inline;
+}
+
+button{
+    width: 14%;
+    font-size: 0.8em;
+    display: inline;
+    margin-left: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+.fa-th-list, .fa-th-large {
+    cursor: pointer;
+    margin: 0 0.3em;
+}
+
+.fa-th-list:hover, .fa-th-large:hover {
+    color: #fff;
+}
+
+.search-grid p {
+    display: inline-block;
+    margin: 0.5em;
+}

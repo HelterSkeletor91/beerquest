@@ -1,0 +1,37 @@
+<h1>{{beer.name}} <span class="header_location">| {{beer.brewery_location}}</span></h1>
+<button (click)="goBack()">Back</button>
+<div id="infoDiv" class="infoWrap">
+    <div class="infoLeft">
+        <p><span>Brewed at:</span> {{beer.brewery_location}}</p>
+        <p>&nbsp;</p>
+        <p><span>Style:</span> {{beer.style}}</p>
+    </div>
+    <div class="infoRight">
+        <p><span>ABV:</span> {{beer.abv}}%</p>
+        <p><span>IBU:</span> {{beer.ibu}}</p>
+        <p><span>Calories:</span> {{beer.calories}}</p>
+    </div>
+    <div class="saveEditDiv">
+        <button id="editButton" (click)="editMode()">Edit</button>
+    </div>
+</div>
+
+<div id="editDiv" class="infoWrap editWrap hideWrap">
+    <div class="infoLeft">
+        <p><span>Name: </span><input #beerName [(ngModel)]="beer.name" placeholder="Beer Name" /></p>
+        <p><span>Brewed at: </span><input #beerLoc [(ngModel)]="beer.brewery_location" placeholder="Brewery Location" /></p>
+        <p><span>Style: </span><input #beerStyle [(ngModel)]="beer.style" placeholder="Style" /></p>
+        <p><span>Category: </span><input #beerCat [(ngModel)]="beer.category" placeholder="Category" /></p>
+        
+    </div>
+    <div class="infoRight">
+        <p><span>ABV: </span><input #beerAbv [(ngModel)]="beer.abv" placeholder="ABV"/></p>
+        <p><span>IBU: </span><input #beerIbu [(ngModel)]="beer.ibu" placeholder="IBU"/></p>
+        <p><span>Calories: </span><input #beerCal [(ngModel)]="beer.calories" placeholder="Calories"/></p>
+        <p><span>URL: </span><input #beerUrl [(ngModel)]="beer.url" placeholder="URL"/></p>
+    </div>
+    <div class="saveEditDiv">
+        <button id="saveButton" (click)="saveBeer(beerName.value, beerIbu.value, beerAbv.value, beerStyle.value, beerLoc.value, beerCal.value, beerUrl.value, beer.created_on, beerCat.value)">Save</button>
+        <button id="cancelButton" (click)="cancelEdit()">Cancel</button>
+    </div>
+</div>

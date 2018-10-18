@@ -1,0 +1,29 @@
+.beers p {
+    width: 30%;
+    background-color: #DCA22D;
+    border-radius: 4px;
+}
+
+.beers p:hover {
+    background-color: #fff;
+}
+
+.beers a {
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+}
+
+.beers a span {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+}
+
+span.beerName {
+    font-size: 1.5em;
+}
+
+span.beerLoc, span.beerStyle {
+    font-size: 0.9em;
+    color: #333;
+}

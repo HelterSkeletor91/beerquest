@@ -1,0 +1,11 @@
+<div class="beers">
+  <p *ngFor="let beer of beers" class="badge">
+    <ng-container *ngIf="beer.category.substring(beer.category.indexOf('y/')+2,beer.category.length-1) == this.route.snapshot.paramMap.get('id')">
+    <a routerLink="/beers/{{beer.url.substring(beer.url.indexOf('rs/')+3, beer.url.length-1)}}">
+        <span class="beerName">{{beer.name}}</span><br />
+        <span class="beerLoc">{{beer.brewery_location}}</span><br />
+        <span class="beerStyle">{{beer.style}} / {{beer.abv}}% ABV</span>
+    </a>
+    </ng-container>
+  </p>
+</div>

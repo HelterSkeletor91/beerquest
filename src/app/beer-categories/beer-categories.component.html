@@ -1,0 +1,17 @@
+<div class="catHeader">
+    <h2>Beer Categories</h2>
+    <div id="addCatDiv">
+        <h4>Not seeing your favorite style? Add it!</h4>
+        <input #catName placeholder="New Category Name" />
+        <button (click)="add(catName.value); catName.value=''">
+            Add
+        </button>
+    </div>
+</div>
+<ul class="categories">
+  <li *ngFor="let category of categories" class="badge" >
+    <a routerLink="{{category.url.substring(category.url.indexOf('y/')+2, category.url.length-1)}}">
+        <span>{{category.name}}</span>
+    </a>
+  </li>
+</ul>

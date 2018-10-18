@@ -1,0 +1,35 @@
+<h2>We are always adding to our online collection, feel free to help!</h2>
+<div class="addBeerWrap">
+    <div class="fieldsLeft">
+        <input id="nameField" #beerName placeholder="Beer Name" />
+        <input id="locField" #beerLoc placeholder="Brewery" />
+        <input id="styleField" #beerStyle placeholder="Style" />
+    </div>
+    <div class="fieldsRight">
+        <input id="ibuField" #beerIbu placeholder="IBU" />
+        <input id="calField" #beerCal placeholder="Calories" />
+        <input id="abvField" #beerAbv placeholder="ABV" />
+    </div>
+    <div>
+        <select id="catField" #beerCat>
+            <option value="">
+                -- Select a Category
+            </option>
+            <option *ngFor="let cat of cats" value="{{cat.url.substring(cat.url.indexOf('y/')+2,cat.url.length-1)}}">
+                {{cat.name}}
+            </option>
+        </select>   
+        <button (click)="
+           add(beerName.value, beerIbu.value, beerCal.value, beerAbv.value, beerStyle.value, beerLoc.value, beerCat.value);
+           beerName.value='';
+           beerIbu.value='';
+           beerCal.value='';
+           beerAbv.value='';
+           beerStyle.value='';
+           beerLoc.value='';
+           beerCat.value='';
+        ">
+            Add
+        </button>
+    </div>
+</div>

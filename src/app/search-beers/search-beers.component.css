@@ -1,0 +1,78 @@
+input {
+    width: 70%;
+    font-size: 1.3em;
+    margin: 0 0.3em;
+}
+
+input[type="text"], textarea {
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #888;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.fa-search, .fa-th-list, .fa-th-large {
+    color: #888;
+}
+
+.fa-th-list, .fa-th-large {
+    cursor: pointer;
+    margin: 0 0.3em;
+}
+
+.fa-th-list:hover, .fa-th-large:hover {
+    color: #fff;
+}
+
+*:focus {
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #888;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #888;
+}
+
+.search-result p {
+    margin: 0.8em 0;
+    padding: 0.8em 0;
+    background-color: #DCA22D;
+    border-radius: 4px;
+    width: 25%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.search-grid p {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.search-result p:hover {
+    background-color: #fff;
+}
+
+
+.search-result a {
+    text-decoration: none;
+    color: #000;
+    margin: 0.8em 0;
+}
+
+.locSpan {
+    font-size: 0.8em;
+    color: #333;
+}
