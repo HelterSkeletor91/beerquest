@@ -23,6 +23,7 @@ h2 {
 select {
     font-size: 1em;
     margin-top: 2em;
+    background-color: #fff;
 }
 
 button {
@@ -31,4 +32,6 @@ button {
     margin-left: 1em;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
+    background-color: #fff;
+    border-radius: 4px;
 }
