@@ -34,15 +34,5 @@ export class CatDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-  
-  // Method to toggle list view on
-  listResult(): void {
-    document.getElementById('catDetails').classList.remove('search-grid');
-  }
-  
-  // Method to toggle grid view on
-  gridResult(): void {
-    document.getElementById('catDetails').classList.add('search-grid');
-  }
 
 }
